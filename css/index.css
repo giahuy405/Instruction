@@ -103,7 +103,7 @@
 .navbarInstruction .nav-item .nav-link:hover{
     color: #ff4f81;
 }
-.navbarInstruction .nav-item::after{
+.navbarInstruction .nav-item::before{
     content: '';
     height: 3px;
     width: 0;
@@ -114,25 +114,13 @@
     bottom: 0;
     left: 0;
 }
-.navbarInstruction .nav-item::before{
-    content: '';
-    height: 3px;
-    width: 0;
-    background-color: #ff4f81;
-    display: block;
-    transition: all .5s;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.navbarInstruction .nav-item:hover::after,.navbarInstruction .nav-item:hover::before{
+.navbarInstruction .nav-item:hover::before{
     width: 100%;
 }
 .navbarInstruction .nav-item.active .nav-link{
     color: #ff4f81;
 }
-.navbarInstruction .nav-item.active::after,.navbarInstruction .nav-item.active::before{
+.navbarInstruction .nav-item.active::before{
     width: 100%;
 }
 .navbarInstruction .dropdown-menu{
@@ -150,7 +138,12 @@
 .dropdown-item:focus, .dropdown-item:hover{
     background-color: transparent;
 }
+.navbar-toggler{
+    color: #ff4f81;
+    background-color: black;
+    border-radius: 0;
 
+}
 /* canh giữa cho thẻ con có position absolute */
 .carousel-caption{
     top: 55%;
@@ -484,7 +477,7 @@
     padding: 13px;
     border-radius: 0;
     border: 1px solid #ff4f81;
-    font-size: 14px;
+    font-size: 16px;
     width: 100%;
 }
 .footer__form button:hover{
@@ -495,13 +488,6 @@
  .footer__form .col-6,.footer__form .col-2{
     padding: 0 15px;
 }
- 
- 
-
-
-
-
-
 
 
 @keyframes moveButton{
@@ -514,3 +500,198 @@
         transform: translateX(-100%);
     }
 }
+
+
+
+
+
+@media screen and (max-width:1199.98px){
+    .navbarInstruction .nav-item .nav-link{
+        font-size:1.2vw;
+    }
+    .navbarInstruction .nav-item{
+        margin: 0 0.4vw;
+    }
+    .navbarInstruction .navbar-brand h2{
+        font-size: 3.5vw;
+    }
+    .navbarInstruction .navbar-brand i{
+        font-size: 3.5vw;
+    }
+    .navbarInstruction .navbar-brand p{
+        font-size: 2vw;
+    }
+    .footer__form label{
+        padding: 0;
+        line-height: 24px;
+    }
+    .footer__form .container .row input{
+        padding: 22px 14px;
+       
+    }
+    .footer__form button{
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width:991.98px){
+    .carousel-caption{
+        top: 50%;
+    }
+    .carousel-caption h5 {
+        font-size: 4.5vw;
+    }
+    .carousel-caption p{
+        font-size: 1.8vw;
+    }
+    .carousel-caption button{
+        padding: 1.25vw 1.75vw;
+        margin-top: 1.2vw;
+    }
+    .carousel-control-next, .carousel-control-prev{
+        z-index: 100;
+    }
+   
+
+}
+@media screen and (max-width:767.98px){
+    .navbar-toggler{
+        padding: 1.5vw 2vw;
+    }
+    .navbar-nav{
+        background-color: #eeeeee;
+        text-align: center;
+    }
+    .navbarInstruction .dropdown-menu{
+        background-color: gray;
+        text-align: center;
+        border-radius: 0;
+    }
+    .carousel-caption{
+        top: 40%;
+    }
+    .navbarInstruction .nav-item .nav-link{
+        font-size: 2.5vw;
+    }
+
+    .title h2 {
+        font-size: 6vw;
+    }
+    .title p {
+        font-size: 3vw;
+    }
+    .testimonial__top::after{
+        bottom: -4%;
+    }
+    .testimonial__item .testimonial__bottom img{
+        width: 28%;
+    }
+    .stats__item h3{
+        margin: 2vw 0;
+    }
+    .stats__item p{
+        margin-bottom: 5vw;
+    }
+    
+}
+
+@media screen and (max-width:575.98px){
+    .header__left a{
+        display: inline-block;
+        font-size: 3.5vw;
+    }
+    .header__left a:nth-child(2){
+        margin: 0!important;
+    }
+    .header__left{
+        width: 50%;
+    }
+    .header__right{
+        width: 50%;
+        text-align: center;
+    }
+    .header__right a{
+        width: 7vw;
+        height: 7vw;
+        line-height:7vw;
+        font-size: 4.5vw;
+    }
+    .navbarInstruction .navbar-brand i{
+        font-size: 5vw;
+    }
+    .navbarInstruction .navbar-brand h2{
+        font-size: 5.5vw;
+    }
+    .navbarInstruction .navbar-brand p{
+        font-size: 2.75vw;
+    }
+    .carousel-caption{
+        top: 17vw;
+    }
+    .carousel-caption h5{
+        font-size: 5vw;
+    }
+    .carousel-caption p{
+        font-size: 3vw;
+        letter-spacing: 0;
+    }
+    .navbarInstruction .nav-item .nav-link{
+        font-size: 3.25vw;
+    }
+    .welcome__content p:first-child{
+        font-size: 3.2vw;
+        padding-top: 0;
+    }
+    .testimonial__top::after{
+        bottom: -7%;
+    }
+    
+     
+}
+@media screen and (max-width:440px) {
+    .carousel-caption{
+        top: 40%;
+    }
+    .carousel-item img{
+        height: 250px;
+        object-fit: cover;
+    }
+    .carousel-indicators li{
+        display: none;
+    }
+    .navbarInstruction .dropdown-menu .dropdown-item{
+        font-size: 3.25vw;
+    }
+    .title p {
+        font-size: 3.5vw;
+        letter-spacing: 2px;    
+    }
+    .testimonial__top::after {
+        bottom: -6%;
+    }
+}
+@media screen and (max-width:350px){
+    .header__right{
+        width:24%;
+         
+    }
+    .testimonial__top::after {
+        bottom: -5%;
+    }
+    .header__right a{
+        margin: 0;
+        margin-bottom: 1vw;
+    }
+     .carousel-caption p{
+        display: none;
+    }
+    .carousel-caption{
+        top: 50%;
+    }
+    
+}
+ 
+
+
+ 
